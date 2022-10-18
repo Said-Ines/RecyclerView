@@ -3,4 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Career"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Career">
+    <!--android:background="@drawable/background_border"
+    android:layout_marginTop="3dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="80dp"
+    android:orientation="vertical"-->
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+    />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        android:layout_margin="3dp"
+        />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/experience"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp"
+            android:text="Experience"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/education"
+            android:layout_weight="1"
+            android:layout_marginStart="1dp"
+            android:text="Education"
+
+
+            />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
