@@ -29,8 +29,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/layout"
         app:layout_constraintTop_toBottomOf="@+id/app_bar"
-        android:layout_margin="3dp"
-        />
+        android:layout_margin="3dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp" />
+    </androidx.fragment.app.FragmentContainerView>
+
+
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
